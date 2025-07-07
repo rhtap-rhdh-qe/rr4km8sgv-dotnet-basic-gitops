@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: rr4km8sgv-dotnet-basic
+  janus-idp.io/tekton: rr4km8sgv-dotnet-basic
+  backstage.io/kubernetes-id: rr4km8sgv-dotnet-basic
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: rr4km8sgv-dotnet-basic
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
